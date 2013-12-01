@@ -25,5 +25,3 @@ default[:mysql][:root_network_acl] 		= node[:db][:root_network_acl]
 default[:mysql][:remove_anonymous_users] = node[:db][:remove_anonymous_users]
 default[:mysql][:allow_remote_root] 	= node[:db][:allow_remote_root]
 default[:mysql][:data_dir] 				= node[:db][:data_dir]
-
-node.set_unless[:mariadb][:version] = '10.0'
