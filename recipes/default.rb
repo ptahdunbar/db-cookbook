@@ -15,6 +15,3 @@ if node[:db][:platform]
 		include_recipe 'db::mariadb'
 	end
 end
-
-include_recipe 'db::databases'
-include_recipe 'db::users'
