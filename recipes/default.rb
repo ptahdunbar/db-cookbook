@@ -7,9 +7,6 @@
 # All rights reserved - Do Not Redistribute
 #
 
-include_recipe 'db::databases'
-include_recipe 'db::users'
-
 if node[:db][:platform]
 	case node[:db][:platform]
 	when 'mysql'
@@ -18,3 +15,6 @@ if node[:db][:platform]
 		include_recipe 'db::mariadb'
 	end
 end
+
+include_recipe 'db::databases'
+include_recipe 'db::users'
