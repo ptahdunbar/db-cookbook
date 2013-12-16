@@ -13,6 +13,7 @@ if node[:db][:users]
 			connection mysql_connection_info
 			password '' unless u['password']
 			database_name u['db'] if u['db']
+			host '' unless u['host']
 			action [:grant, :create] unless u['action']
 		end
 	end
