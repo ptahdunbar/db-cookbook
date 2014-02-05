@@ -7,7 +7,7 @@ mysql_connection_info = {
 if node[:db][:users]
 
 	node[:db][:users].each do |u|
-		name = ! u.include?('name') ? u : u['name']
+		name = ! u.include?('user') ? u : u['user']
 		passwd = ! u.include?('password') ? '' : u['password']
 
 		mysql_database_user name do
